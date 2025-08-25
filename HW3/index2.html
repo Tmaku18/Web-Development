@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <h1>Memory Match Game</h1>
+
+    <div id="setup-screen" class="setup-container">
+        <h2>Game Setup</h2>
+        <div class="setup-options">
+            <div class="option">
+                <label for="difficulty">Difficulty (Memorization Time):</label>
+                <select id="difficulty">
+                    <option value="3000">Easy (3 seconds)</option>
+                    <option value="5000" selected>Medium (5 seconds)</option>
+                    <option value="8000">Hard (8 seconds)</option>
+                </select>
+            </div>
+            <div class="option">
+                <label for="pairs">Number of Pairs:</label>
+                <select id="pairs">
+                    <option value="8">8 Pairs</option>
+                    <option value="10" selected>10 Pairs</option>
+                    <option value="12">12 Pairs</option>
+                </select>
+            </div>
+        </div>
+        <button id="start-btn">Start Game</button>
+        <button id="leaderboard-btn">View Leaderboard</button>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <div class="game-info">
+            <p>Time Left: <span id="time-left">150</span>s</p>
+            <p>Score: <span id="current-score">0</span></p>
+        </div>
+        <div id="game-board" class="game-board">
+            </div>
+    </div>
+
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="game-over-title">You Won!</h2>
+            <p id="game-over-message">Your final score is: <span id="final-score">0</span></p>
+            <div id="leaderboard-entry">
+                <p>Enter your name to save your score:</p>
+                <input type="text" id="player-name" placeholder="Your Name" maxlength="10">
+                <button id="save-score-btn">Save Score</button>
+            </div>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+    
+    <div id="leaderboard-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Top 5 Scores</h2>
+            <ol id="leaderboard-list">
+                </ol>
+            <button id="close-leaderboard-btn">Close</button>
+        </div>
+    </div>
+
+
+    <script src="script2.js"></script>
+</body>
+</html>

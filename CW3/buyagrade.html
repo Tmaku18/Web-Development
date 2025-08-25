@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Buy Your Way to a Better Education up in Here!</title>
+    <link href="./buyagrade.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Buy Your Way to a Better Education up in Here!</h1>
+
+    <p>
+      Life itself is your professor, and you are in a state of constant
+      learning… Which of the three are you? All you need to get a 4.0 in this
+      course. My education is about learning what you didn't know, even if you
+      know you didn't know.
+    </p>
+
+    <hr />
+
+    <h2>Give Us Your Money</h2>
+
+    <form action="https://codd.cs.gsu.edu/~tmakuvaza1/WP/CW/3/sucker.php" method="post">
+      <dl>
+        <dt>Name</dt>
+        <dd>
+          <input type="text" name="name" required />
+        </dd>
+
+        <dt>Section</dt>
+        <dd>
+          <select name="section" required>
+            <option value="">-- choose --</option>
+            <option value="MA">MA</option>
+            <option value="MB">MB</option>
+            <option value="MC">MC</option>
+            <option value="MD">MD</option>
+            <option value="ME">ME</option>
+            <option value="MF">MF</option>
+            <option value="MG">MG</option>
+            <option value="MH">MH</option>
+          </select>
+        </dd>
+
+        <dt>Credit Card</dt>
+        <dd>
+          <fieldset>
+            <legend>Type:</legend>
+            <label>
+              <input type="radio" name="cc_type" value="Visa" required />
+              Visa
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="cc_type"
+                value="MasterCard"
+                required
+              />
+              MasterCard
+            </label>
+          </fieldset>
+          <br />
+          <label>
+            Number:
+            <input
+              type="text"
+              name="cc_number"
+              pattern="\d{13,16}"
+              placeholder="e.g. 4111222233334444"
+              required
+            />
+          </label>
+        </dd>
+      </dl>
+
+      <p>
+        <button type="submit">Buy Now!</button>
+        <button type="reset">Reset</button>
+      </p>
+    </form>
+
+    <div>I am a giant sucker.</div>
+  </body>
+</html>

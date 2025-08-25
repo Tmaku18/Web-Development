@@ -1,0 +1,308 @@
+/* Board Game Styles */
+
+.board-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.board-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.board-title {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.player-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Game Board Layout */
+.game-board {
+    background: #f7fafc;
+    border: 4px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    position: relative;
+    min-height: 400px;
+}
+
+.board-path {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.board-space {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.board-space:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.board-space.current-position {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border-color: #f6ad55;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(246, 173, 85, 0.4);
+}
+
+.board-space.current-position::after {
+    content: "🎲";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 1.5rem;
+    animation: bounce 1s infinite;
+}
+
+.space-number {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 0.9rem;
+}
+
+.space-event {
+    font-size: 0.8rem;
+    color: #4a5568;
+    margin-top: 0.5rem;
+}
+
+/* Life Events Section */
+.life-events {
+    background: #f7fafc;
+    border: 3px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.life-events h3 {
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.event-options {
+    display: grid;
+    gap: 1rem;
+}
+
+.event-option {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.event-option:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.event-option input[type="radio"] {
+    margin-right: 1rem;
+    transform: scale(1.2);
+}
+
+.event-option label {
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+}
+
+.event-option.selected {
+    border-color: #667eea;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+/* Dice Rolling Section */
+.dice-section {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border-radius: 15px;
+}
+
+.dice-display {
+    font-size: 4rem;
+    margin: 1rem 0;
+    animation: spin 0.5s ease-in-out;
+}
+
+.dice-result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin: 1rem 0;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.btn-roll {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+}
+
+.btn-roll:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.6);
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* Game Over / Win Styles */
+.game-result {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.game-result.win {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+}
+
+.game-result.lose {
+    background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+    color: white;
+}
+
+.result-icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.result-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.result-message {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Leaderboard Styles */
+.leaderboard {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.leaderboard-table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: bold;
+}
+
+.leaderboard-table tr:hover {
+    background: #f7fafc;
+}
+
+/* Responsive Design for Boards */
+@media (max-width: 768px) {
+    .board-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .board-path {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .player-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .board-title {
+        font-size: 2rem;
+    }
+}

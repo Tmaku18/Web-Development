@@ -1,0 +1,15 @@
+# Test Plan for Liferoll Project
+
+## Test Cases
+- [ ] Homepage loads correctly
+- [ ] Navigation between boards works
+- [ ] Dice rolling functionality
+- [ ] Game state persistence
+- [ ] Leaderboard functionality
+- [ ] Win/lose conditions
+
+## Bug Tracking
+(
+
+## Testing Notes
+
